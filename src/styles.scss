@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cabin', sans-serif;
+}
+a:hover{
+  text-decoration: none;
+}
+$primary: #EEEFE9;
+$bg: #ffffff;
+$bg-one: #F7F7F9;
+$bg-two: #F6F3FD;
+$text-color: #A6A9B0;
+$btn-bg: #FF6D63;
+
+.main-button{
+  background: $btn-bg;
+  color: #ffffff;
+}
