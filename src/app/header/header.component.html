@@ -1,0 +1,33 @@
+<div style="height: 80vh;">
+  <mat-toolbar class="header">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Responsive Navigation</span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <a href="#" mat-button>restaurant</a>
+        <a href="#" mat-button>categories</a>
+        <a href="#" mat-button>write a review</a>
+        <a href="#" mat-button>sign up</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlexFill>
+    <mat-sidenav #sidenav>
+      <mat-nav-list>
+        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+        <a href="#" mat-list-item>restaurant</a>
+        <a href="#" mat-list-item>categories</a>
+        <a href="#" mat-list-item>write a review</a>
+        <a href="#" mat-list-item>sign up</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+       <app-home></app-home>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
