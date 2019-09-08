@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&display=swap');
+
+$bg: #EEEFE9;
+$font: 'Cabin', sans-serif;
+
+.hero {
+  background: $bg;
+  font-family: $font;
+}
+
+.button-row a {
+  margin-right: 8px;
+}
+.button-row {
+  margin: 0 auto;
+}
+
+.hero-form {
+  width: 100%;
+}
+
+.form-full-width {
+  width: 100%;
+}
+
+mat-form-field {
+  margin-right: 12px;
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i&display=swap');
+
+$primary: #EEEFE9;
+
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.header {
+  background: $primary;
+}
+.sticky {
+    background: #fff;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
+    position: fixed;
+    top: 0;
+    height: 120px;
+    width: 100%;
+}

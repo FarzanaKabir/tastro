@@ -1,0 +1,46 @@
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Eat what you want, <span>where you want</span></h1>
+      </div>
+      <!-- form section start -->
+      <form class="hero-form d-inline-flex">
+        <mat-form-field>
+          <mat-select #fontSize value="16px" (selectionChange)="triggerResize()">
+            <mat-option value="10px">10px</mat-option>
+            <mat-option value="12px">12px</mat-option>
+            <mat-option value="14px">14px</mat-option>
+            <mat-option value="16px">16px</mat-option>
+            <mat-option value="18px">18px</mat-option>
+            <mat-option value="20px">20px</mat-option>
+          </mat-select>
+           <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Input">
+           <mat-icon matPrefix>place</mat-icon>
+        </mat-form-field>
+        <button mat-flat-button color="warn">Warn</button>
+      </form>
+      <!-- form section end-->
+      <!-- categories button group start-->
+      <div class="button-row">
+        <a mat-flat-button routerLink=".">Chinese</a>
+        <a mat-flat-button routerLink=".">Indian</a>
+        <a mat-flat-button routerLink=".">Cousine</a>
+        <a mat-flat-button routerLink=".">Bangla</a>
+        <a mat-flat-button routerLink=".">Fast Food</a>
+      </div>
+      <!-- categories button group end-->
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="hero-bg-img">
+          <img src="../../../assets/homepage/bg.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
