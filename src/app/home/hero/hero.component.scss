@@ -2,6 +2,9 @@
 
 $bg: #EEEFE9;
 $font: 'Cabin', sans-serif;
+.section {
+  padding: 100px 0;
+}
 
 .hero {
   background: $bg;
@@ -11,6 +14,7 @@ $font: 'Cabin', sans-serif;
 .button-row a {
   margin-right: 8px;
 }
+
 .button-row {
   margin: 0 auto;
 }

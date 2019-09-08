@@ -8,12 +8,8 @@ $primary: #EEEFE9;
 
 .header {
   background: $primary;
+  position: fixed !important;
+  top: 0;
+  z-index: 2;
 }
-.sticky {
-    background: #fff;
-    box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
-    position: fixed;
-    top: 0;
-    height: 120px;
-    width: 100%;
-}
+

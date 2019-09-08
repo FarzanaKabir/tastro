@@ -1,9 +1,31 @@
-<section class="tastro-for-business">
+<section class="tastro-for-business section">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <h2 class="main-title">Tastro For Business</h2>
+        <p>Testro brings you new customers and helps your regulars order more. <br>
+          See what changes we can bring to your business.</p>
       </div>
+    </div>
+    <div class="row">
+      <!--card 1 start-->
+      <div class="col-md-4 col-sm-4 col-xs-6" *ngFor="let card of cards">
+        <div class="business-card">
+          <div class="business-card-icon">
+            <img class="img-fluid" src="{{card.icon}}" alt="">
+          </div>
+          <div class="business-card-title pt-5 mt-2">
+            <h4>{{card.title}}</h4>
+          </div>
+          <div class="business-card-text pt-2 pb-3">
+            <p>{{card.text}}</p>
+          </div>
+          <button color="warn" mat-icon-button class="mat-18">
+            <mat-icon class="mat-18">trending_flat</mat-icon>
+          </button>
+        </div>
+      </div>
+      <!--card 1 end-->
     </div>
   </div>
 </section>

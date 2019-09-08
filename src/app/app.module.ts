@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {HomeModule} from './home/home.module';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import {HomeModule} from './home/home.module';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
+    HttpClientModule,
 
     HomeModule,
 
