@@ -6,10 +6,125 @@ $primary: #EEEFE9;
   flex: 1 1 auto;
 }
 
-.header {
+header {
   background: $primary;
   position: fixed !important;
   top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+header .navbar.navbar-expand-lg {
+  height: 68px;
+}
+
+header a {
+  font-size: 0.9em;
+  color: #000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 50px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #FF6D63;
+  color: #ffffff;
+}
+
+.dot::after {
+  position: absolute;
+  content: '';
+  background-color: #000000;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  top: 15px;
+  right: -5px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .nav-item {
+  padding: 0.9em;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/*header .navbar-brand {*/
+/*  padding-left: 8rem;*/
+/*}*/
+
+header .nav-link:hover {
+  color: #FF6D63;
+}
+
+header .signup-btn {
+  color: #FF6D63;
+  background: transparent;
+  text-decoration: none;
+  -webkit-transition: .3s all ease;
+  transition: .3s ease all;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #FF6D63;
+  border-radius: 2px;
+  position: relative;
   z-index: 2;
 }
 
+header .signup-btn:before {
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: #FF6D63;
+  z-index: -1;
+}
+
+header .signup-btn:hover,
+header .signup-btn:focus {
+  color: #FFF;
+}
+
+header .signup-btn:hover:before,
+header .signup-btn:focus:before {
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+}

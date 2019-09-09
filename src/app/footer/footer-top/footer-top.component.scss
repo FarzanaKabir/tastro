@@ -1,0 +1,63 @@
+.footer-top .testro {
+  letter-spacing: 3px;
+  font-family: var(--Roboto);
+  font-weight: bolder;
+}
+
+.footer-top .social-icon li a {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.footer-top .social-icon li a:hover fa-icon {
+  background: #FF6D63;
+}
+
+.footer-top .social-icon li a {
+  height: 30px;
+  width: 30px;
+}
+
+.footer-top .social-icon li a fa-icon {
+  color: #ffffff;
+  background: #e9e9e9;
+  border-radius: 100%;
+  margin-right: 5px;
+  padding: 9px 6px 6px 6px;
+  text-align: center;
+  font-size: 13px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.footer-top .navigation-list li a,
+.footer-top .link-list li a {
+  color: #afb2b9;
+  font-size: 13px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.footer-top .navigation-list li a:hover,
+.footer-top .link-list li a:hover {
+  color: #FF6D63;
+  margin-left: 7px;
+}
+
+.footer-top .navigation-list li,
+.footer-top .link-list li {
+  margin: 7px 0 0 0;
+}
+
+.footer-top .download img {
+  background: #ffffff;
+}

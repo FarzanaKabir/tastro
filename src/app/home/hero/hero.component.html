@@ -1,13 +1,13 @@
 <section class="hero section">
   <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center">
+      <div class="col-md-12 col-sm-12 col-xl-12 text-center">
         <h1>Eat what you want, <span>where you want</span></h1>
       </div>
       <!-- form section start -->
-      <form class="hero-form d-inline-flex">
+      <div class="hero-form d-inline-flex">
         <mat-form-field>
-          <mat-select #fontSize value="16px" (selectionChange)="triggerResize()">
+          <mat-select>
             <mat-option value="10px">10px</mat-option>
             <mat-option value="12px">12px</mat-option>
             <mat-option value="14px">14px</mat-option>
@@ -22,15 +22,15 @@
            <mat-icon matPrefix>place</mat-icon>
         </mat-form-field>
         <button mat-flat-button color="warn">Warn</button>
-      </form>
+      </div>
       <!-- form section end-->
       <!-- categories button group start-->
       <div class="button-row">
-        <a mat-flat-button routerLink=".">Chinese</a>
-        <a mat-flat-button routerLink=".">Indian</a>
-        <a mat-flat-button routerLink=".">Cousine</a>
-        <a mat-flat-button routerLink=".">Bangla</a>
-        <a mat-flat-button routerLink=".">Fast Food</a>
+        <button class="btn-light" mat-flat-button routerLink=".">Chinese</button>
+        <button class="btn-light" mat-flat-button routerLink=".">Indian</button>
+        <button class="btn-light" mat-flat-button routerLink=".">Cousine</button>
+        <button class="btn-light" mat-flat-button routerLink=".">Bangla</button>
+        <button class="btn-light" mat-flat-button routerLink=".">Fast Food</button>
       </div>
       <!-- categories button group end-->
     </div>

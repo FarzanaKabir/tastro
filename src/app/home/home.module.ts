@@ -14,11 +14,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatCardModule} from '@angular/material/card';
+import {ReactiveFormsModule} from '@angular/forms';
+import {HeaderComponent} from '../header/header.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatListModule} from '@angular/material/list';
 
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  declarations: [HomeComponent, HeroComponent, RestaurantsNearbyComponent, TastroForBusinessComponent, FindOurCitiesComponent, SayingAboutUsComponent, NewsletterComponent],
+  declarations: [HomeComponent, HeroComponent, RestaurantsNearbyComponent, TastroForBusinessComponent, FindOurCitiesComponent, SayingAboutUsComponent, NewsletterComponent, HeaderComponent],
   exports: [
     HomeComponent
   ],
@@ -30,7 +36,12 @@ import {MatCardModule} from '@angular/material/card';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    FlexLayoutModule,
+    MatListModule,
   ]
 })
 export class HomeModule {

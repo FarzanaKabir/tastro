@@ -16,14 +16,20 @@ label {
   margin-bottom: 0;
 }
 
+ul li {
+  list-style: none;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Cabin', sans-serif;
 }
-a:hover{
+
+a:hover {
   text-decoration: none;
 }
+
 $primary: #EEEFE9;
 $bg: #ffffff;
 $bg-one: #F7F7F9;
@@ -31,7 +37,85 @@ $bg-two: #F6F3FD;
 $text-color: #A6A9B0;
 $btn-bg: #FF6D63;
 
-.main-button{
+.main-button {
   background: $btn-bg;
   color: #ffffff;
+}
+
+/******* view button *******/
+.view-btn {
+    padding: 15px 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden !important;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    background: transparent !important;
+}
+
+
+.view-btn:hover {
+    border: 1px solid transparent;
+    color: #FF6D63 !important;
+}
+
+.view-btn::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #FF6D63;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    top: 0;
+    z-index: -12;
+    -webkit-transition: all .65s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all .65s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all .65s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all .65s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.view-btn::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #ee8a1a;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    top: 0;
+    z-index: -15;
+    -webkit-transition: all .65s cubic-bezier(0.77, 0, 0.175, 1);
+    -moz-transition: all .65s cubic-bezier(0.77, 0, 0.175, 1);
+    -o-transition: all .65s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: all .65s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.view-btn:hover::before, .view-btn:hover::before {
+    opacity: 1;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.view-btn:hover::after, .view-btn:hover::after {
+    opacity: 1;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
 }

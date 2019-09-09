@@ -1,0 +1,97 @@
+.newsletter {
+  background: #F6F3FD;
+  padding: 500px 0 100px 0;
+}
+
+.newsletter-form {
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-right: 12px;
+  background: #fff;
+  height: 45px;
+}
+
+.newsletter-form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 4vmin 0 8vmin 0;
+}
+
+.newsletter-form select,
+.newsletter-form input {
+  border: 0;
+}
+
+.newsletter-form .form-control {
+  height: 50px;
+}
+
+/********** subscribe button ************/
+
+.subscribe-btn {
+  cursor: pointer;
+  padding: 20px 50px;
+  line-height: 64px;
+  position: relative;
+  z-index: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #FF6D63;
+}
+
+.subscribe-btn span {
+  color: #fff;
+  text-transform: uppercase;
+  transform: scaleX(0.6);
+  font-family: var(--Poppins);
+  transform-origin: center left;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.subscribe-btn:before,
+.subscribe-btn:after {
+  content: '';
+  background: #fff;
+  height: 50%;
+  width: 0;
+  position: absolute;
+  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.subscribe-btn:before {
+  top: 0;
+  left: 0;
+  right: auto;
+}
+
+.subscribe-btn:after {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+.subscribe-btn:hover:before {
+  width: 100%;
+  right: 0;
+  left: auto;
+}
+
+.subscribe-btn:hover:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.subscribe-btn:hover span {
+  color: #000;
+}

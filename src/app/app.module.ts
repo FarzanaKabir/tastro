@@ -6,8 +6,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {MaterialModule} from './material/material.module';
 import {MatButtonModule} from '@angular/material/button';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,13 +13,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {HomeModule} from './home/home.module';
 import {HttpClientModule} from '@angular/common/http';
+import {FooterModule} from './footer/footer.module';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -30,8 +30,10 @@ import {HttpClientModule} from '@angular/common/http';
     MaterialModule,
     FlexLayoutModule,
     HttpClientModule,
+    FontAwesomeModule,
 
     HomeModule,
+    FooterModule,
 
     MatButtonModule,
     MatToolbarModule,
@@ -40,6 +42,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatListModule
   ],
   providers: [],
+  exports: [
+  ],
   bootstrap: [
     AppComponent
   ]
