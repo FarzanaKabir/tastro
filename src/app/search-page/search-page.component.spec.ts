@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroComponent } from './hero.component';
+import { SearchPageComponent } from './search-page.component';
 
-describe('HeroComponent', () => {
-  let component: HeroComponent;
-  let fixture: ComponentFixture<HeroComponent>;
+describe('SearchPageComponent', () => {
+  let component: SearchPageComponent;
+  let fixture: ComponentFixture<SearchPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroComponent ]
+      declarations: [ SearchPageComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroComponent);
+    fixture = TestBed.createComponent(SearchPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
