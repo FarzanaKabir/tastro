@@ -1,7 +1,7 @@
 <header [class.sticky] = "sticky">
   <div class="container-fluid p-0">
   <nav class="navbar navbar-expand-lg" style="background-color: #EEEFE9;">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" routerLink="/">
       <img src="../../assets/homepage/logo.png" alt="">
     </a>
     <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
@@ -14,7 +14,7 @@
           <div class="dropdown dot">
             <a href="#" class="nav-link">restaurants</a>
             <div class="dropdown-content">
-              <a href="#">restaurant 1</a>
+              <a routerLink="/restaurant">restaurant 1</a>
               <a href="#">restaurant 2</a>
               <a href="#">restaurant 3</a>
               <a href="#">restaurant 4</a>

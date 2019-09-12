@@ -1,0 +1,18 @@
+.text-align-end {
+  text-align: end;
+}
+
+.item-details-card {
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  padding: 20px 15px;
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.item-details-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border: 0;
+}
+p{
+    color: #9d9b9c !important;
+}

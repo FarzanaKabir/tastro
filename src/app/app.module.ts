@@ -15,6 +15,8 @@ import {HomeModule} from './home/home.module';
 import {HttpClientModule} from '@angular/common/http';
 import {FooterModule} from './footer/footer.module';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {SearchPageModule} from './search-page/search-page.module';
+import {RestaurantDetailsModule} from './restaurant-details/restaurant-details.module';
 
 
 
@@ -33,6 +35,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
     HomeModule,
     FooterModule,
+    SearchPageModule,
+    RestaurantDetailsModule,
 
     MatButtonModule,
     MatToolbarModule,
