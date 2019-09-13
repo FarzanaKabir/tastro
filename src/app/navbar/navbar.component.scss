@@ -1,0 +1,23 @@
+$primary: #EEEFE9;
+
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+header {
+  background: $primary;
+  position: fixed !important;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+header .navbar.navbar-expand-lg {
+  height: 68px;
+  background: $primary;
+}
+
+header a {
+  font-size: 0.9em;
+  color: #000;
+}
