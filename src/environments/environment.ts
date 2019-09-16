@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl:'http://18.223.117.205:8080/api/',
+  apiBaseUrl: 'http://18.223.117.205:8080/api/',
 };
 
 /*
