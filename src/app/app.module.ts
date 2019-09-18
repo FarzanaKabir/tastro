@@ -17,7 +17,7 @@ import {FooterModule} from './footer/footer.module';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {SearchPageModule} from './search-page/search-page.module';
 import {RestaurantDetailsModule} from './restaurant-details/restaurant-details.module';
-
+import {JwtModule} from '@auth0/angular-jwt';
 
 
 @NgModule({
@@ -42,11 +42,20 @@ import {RestaurantDetailsModule} from './restaurant-details/restaurant-details.m
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => {
+          return localStorage.getItem('access_token');
+        },
+        whitelistedDomains: ['localhost'],
+        blacklistedRoutes: ['localhost/auth/login']
+      }
+    })
   ],
   providers: [],
-  exports: [
-  ],
+  exports: [],
   bootstrap: [
     AppComponent
   ]

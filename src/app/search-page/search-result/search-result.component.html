@@ -1,1 +1,22 @@
-<p>search-result works!</p>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<main class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-md-12">
+      <app-breadcum></app-breadcum>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <app-filter></app-filter>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <app-item-list></app-item-list>
+    </div>
+    <div class="col-md-3">
+      <app-map></app-map>
+    </div>
+  </div>
+</main>

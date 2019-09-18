@@ -12,7 +12,7 @@
             </div>
           </div>
         </div>
-        <div class="item-details-card promotion" *ngFor="let item of item1">
+        <div class="item-details-card promotion" *ngFor="let item of promotions">
           <div class="row">
             <div class="col-md-12 text-align-end">
               <button mat-stroked-button color="warn">
@@ -24,16 +24,21 @@
           <div class="row">
             <div class="col-md-4">
               <div class="item-image">
-                <img class="img-fluid" src="{{item.image}}" alt="">
+                <!-- <img class="img-fluid" src="{{getImage('foodItem',item.image)}}" alt="">-->
+                <img src="{{item.image}}" alt="">
               </div>
             </div>
             <div class="col-md-8">
               <div class="item-details">
                 <div class="item-name">
-                  <h4>{{item.title}}</h4>
+                  <h4><a href="">{{item.title}}</a></h4>
                 </div>
                 <div class="item-details">
                   <p>{{item.text}}</p>
+                </div>
+                <div class="emoji d-inline-flex">
+                  <img width="30%" src="{{item.emoji}}" alt="">
+                  <h5 class="ml-3">4.2</h5>
                 </div>
               </div>
             </div>
@@ -46,7 +51,7 @@
             </div>
           </div>
         </div>
-        <div class="sub-meal item-details-card" *ngFor="let item of item2">
+        <div class="sub-meal item-details-card" *ngFor="let item of subi_meals">
           <div class="row">
             <div class="col-md-12 text-align-end">
               <button mat-stroked-button color="warn">
@@ -64,10 +69,14 @@
             <div class="col-md-8">
               <div class="item-details">
                 <div class="item-name">
-                  <h4>{{item.title}}</h4>
+                  <h4><a href="">{{item.title}}</a></h4>
                 </div>
                 <div class="item-details">
                   <p>{{item.text}}</p>
+                </div>
+                <div class="emoji d-inline-flex">
+                  <img width="30%" src="{{item.emoji}}" alt="">
+                  <h5 class="ml-3">4.2</h5>
                 </div>
               </div>
             </div>
