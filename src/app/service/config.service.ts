@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {retry, catchError} from 'rxjs/operators';
-import {FoodItem} from '../typing';
+import {cityDetails, FoodItem} from '../typing';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class ConfigService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfTUFOQUdFUixST0xFX1VTRVIsUk9MRV9XQUlURVIiLCJleHAiOjE1Njg3ODUxOTl9.USfQ6rQocpWtoQ1FqC7vQe4bQKdgxVKTbN921xdeZ03A7jM7zD5Q4rUe2dVaoCNDlZdDvE8L92YXdcXiIEQ5rg'
+      Authorization: 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfTUFOQUdFUixST0xFX1VTRVIsUk9MRV9XQUlURVIiLCJleHAiOjE1NjkwNDcwOTJ9.mfBgtKZTphTOk_FwvwgpdvF3DB-zngdQC8HB_Wh5Z85GvnVQ9EzzJ8_9XoHh_wGvABZhuKQGJ9IDunEb4_xUhw'
     })
   };
 
@@ -38,6 +38,14 @@ export class ConfigService {
   // HttpClient API get() method => Fetch food
   getFoodItem(id): Observable<FoodItem> {
     return this.http.get<FoodItem>(this.apiURL + '/food-items/' + id)
+      .pipe(
+        retry(1),
+        catchError(this.handleError)
+      );
+  }
+
+  getCountry(): Observable<cityDetails> {
+    return this.http.get<cityDetails>(this.apiURL + '/country')
       .pipe(
         retry(1),
         catchError(this.handleError)

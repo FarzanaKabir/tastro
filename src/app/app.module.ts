@@ -18,6 +18,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {SearchPageModule} from './search-page/search-page.module';
 import {RestaurantDetailsModule} from './restaurant-details/restaurant-details.module';
 import {JwtModule} from '@auth0/angular-jwt';
+import {OwlModule} from 'ngx-owl-carousel';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import {JwtModule} from '@auth0/angular-jwt';
     FlexLayoutModule,
     HttpClientModule,
     FontAwesomeModule,
+    OwlModule,
 
     HomeModule,
     FooterModule,

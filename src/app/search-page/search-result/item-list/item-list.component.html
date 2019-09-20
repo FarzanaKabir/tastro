@@ -1,9 +1,9 @@
 <section class="item-list">
-  <div class="item-card" *ngFor="let item of Item">
+  <div class="item-card" *ngFor="let item of Item | paginate: { itemsPerPage: count, currentPage: p }">
     <div class="row">
       <div class="col-md-4">
         <div class="item-img">
-          <img src="{{getImage('foodItem',item.image)}}" alt="">
+          <img class="img-fluid" src="{{getImage('foodItem',item.image)}}" alt="">
         </div>
       </div>
       <div class="col-md-8">
@@ -11,17 +11,40 @@
           <div class="title">
             <h5><a href="">{{item.name}}</a></h5>
           </div>
-          <div class="rating">
-<!--            <small>{{item.rating}}</small>-->
+          <div class="rating d-inline-flex">
+            <ul class="rating-list d-inline-flex p-0 m-0">
+              <li>
+                <mat-icon class="mat-18">star</mat-icon>
+              </li>
+              <li>
+                <mat-icon class="mat-18">star</mat-icon>
+              </li>
+              <li>
+                <mat-icon class="mat-18">star</mat-icon>
+              </li>
+              <li>
+                <mat-icon class="mat-18">star</mat-icon>
+              </li>
+              <li>
+                <mat-icon class="mat-18">star_half</mat-icon>
+              </li>
+            </ul>
+            <span class="ml-2">235</span>
           </div>
           <div class="country">
-<!--            <small>{{item.country}}</small>-->
+            <span>Hakulintie 87, Turku</span>
           </div>
-          <div class="tag-btn d-inline-flex">
-            <h6 class="mr-2">Tag:</h6>
-            <button mat-stroked-button>Thai</button>
-            <button mat-stroked-button class="ml-2 mr-2">Comfort food</button>
-            <button mat-stroked-button>Gluten-free</button>
+          <div class="tag-price">
+            <div class="tag-btn d-inline-flex mb-2">
+              <h6 class="mr-2 p-0 m-0">Tag:</h6>
+              <button mat-stroked-button class="ml-2">Thai</button>
+              <button mat-stroked-button class="ml-2 mr-2">Comfort food</button>
+              <button mat-stroked-button>Gluten-free</button>
+            </div>
+            <div class="price pb-3">
+              <span>Price:</span>
+              <button mat-stroked-button class="ml-2">300-3000</button>
+            </div>
           </div>
           <div class="offer-reservation">
             <div class="row">
@@ -44,4 +67,12 @@
       </div>
     </div>
   </div>
+  <div class="row">
+      <div class="col-md-12 text-center">
+        <!--Including the pagination control.-->
+        <div class="text-center">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </div>
 </section>

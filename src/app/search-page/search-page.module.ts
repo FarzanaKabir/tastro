@@ -14,7 +14,7 @@ import {BreadcumComponent} from './search-result/breadcum/breadcum.component';
 import {ItemListComponent} from './search-result/item-list/item-list.component';
 import {MapComponent} from './search-result/map/map.component';
 import { FilterComponent } from './search-result/filter/filter.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [SearchPageComponent, NavbarComponent, SearchResultComponent, SearchNotResultComponent, BreadcumComponent, ItemListComponent, MapComponent, FilterComponent],
@@ -28,7 +28,8 @@ import { FilterComponent } from './search-result/filter/filter.component';
     AppRoutingModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatInputModule
+    MatInputModule,
+   NgxPaginationModule
   ]
 })
 export class SearchPageModule {
