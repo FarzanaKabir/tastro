@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {retry, catchError} from 'rxjs/operators';
-import {cityDetails, FoodItem} from '../typing';
+import {cityDetails, foodItem} from '../typing';
 
 @Injectable({
   providedIn: 'root'
@@ -21,14 +21,14 @@ export class ConfigService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfTUFOQUdFUixST0xFX1VTRVIsUk9MRV9XQUlURVIiLCJleHAiOjE1NjkwNDcwOTJ9.mfBgtKZTphTOk_FwvwgpdvF3DB-zngdQC8HB_Wh5Z85GvnVQ9EzzJ8_9XoHh_wGvABZhuKQGJ9IDunEb4_xUhw'
+      Authorization: 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfTUFOQUdFUixST0xFX1VTRVIsUk9MRV9XQUlURVIiLCJleHAiOjE1NjkzOTY5MzJ9.X6roC9Ykw4kRQK16dVhqGDdZPGyIQs2CPtJV1lbq9a-DqEYa_eKIj8DvOoPKYdi-jG1iA4rbH_JBTHsQbbOAEg',
     })
   };
 
 
   // HttpClient API get() method => Fetch food list
-  getFoodItems(): Observable<FoodItem> {
-    return this.http.get<FoodItem>(this.apiURL + '/food-items', this.httpOptions)
+  getFoodItems(): Observable<foodItem> {
+    return this.http.get<foodItem>(this.apiURL + '/food-items', this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.handleError)
@@ -36,8 +36,8 @@ export class ConfigService {
   }
 
   // HttpClient API get() method => Fetch food
-  getFoodItem(id): Observable<FoodItem> {
-    return this.http.get<FoodItem>(this.apiURL + '/food-items/' + id)
+  getFoodItem(id): Observable<foodItem> {
+    return this.http.get<foodItem>(this.apiURL + '/food-items/' + id)
       .pipe(
         retry(1),
         catchError(this.handleError)

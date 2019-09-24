@@ -1,5 +1,5 @@
 
-export interface FoodItem {
+export interface foodItem {
   id: number;
   name: string;
   image: string;

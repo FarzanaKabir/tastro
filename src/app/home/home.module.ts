@@ -20,6 +20,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatListModule} from '@angular/material/list';
+import {MatVideoModule} from 'mat-video';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import {MatListModule} from '@angular/material/list';
     MatSidenavModule,
     FlexLayoutModule,
     MatListModule,
+    MatVideoModule,
   ]
 })
 export class HomeModule {

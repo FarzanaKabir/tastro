@@ -7,12 +7,19 @@
   z-index: 1;
 }
 
-.video-img img {
-  width: 100%;
+video[poster] {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.progress {
+  display: none !important;
 }
 
 .video-img {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .play-btn {
@@ -23,7 +30,7 @@
   text-align: center;
 }
 
-.play-btn button{
+.play-btn button {
   background: #fff;
   border-radius: 50%;
   width: 50px;
@@ -31,5 +38,5 @@
 }
 
 .about-us-details {
-  padding: 130px 55px 0 55px;
+  padding: 130px 55px 200px 55px;
 }

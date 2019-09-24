@@ -1,9 +1,9 @@
 <section class="item-list">
-  <div class="item-card" *ngFor="let item of Item | paginate: { itemsPerPage: count, currentPage: p }">
+  <div class="item-card" *ngFor="let item of Item">
     <div class="row">
       <div class="col-md-4">
         <div class="item-img">
-          <img class="img-fluid" src="{{getImage('foodItem',item.image)}}" alt="">
+          <img alt="{{item.name}}" class="img-fluid" src="{{getImage('foodItem',item.image)}}">
         </div>
       </div>
       <div class="col-md-8">
@@ -71,7 +71,7 @@
       <div class="col-md-12 text-center">
         <!--Including the pagination control.-->
         <div class="text-center">
-          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+<!--          <pagination-controls (pageChange)="p = $event"></pagination-controls>-->
         </div>
       </div>
     </div>

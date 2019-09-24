@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ConfigService} from '../../../service/config.service';
-import {cityDetails, FoodItem} from '../../../typing';
+import {foodItem} from '../../../typing';
 
 @Component({
   selector: 'app-item-list',
@@ -8,9 +8,9 @@ import {cityDetails, FoodItem} from '../../../typing';
   styleUrls: ['./item-list.component.scss']
 })
 export class ItemListComponent implements OnInit {
-  @Input() Item: FoodItem;
-  p: Number = 1;
-  count: Number = 5;
+  @Input() Item: foodItem;
+  // p: Number = 1;
+  // count: Number = 5;
 
   constructor(public restApi: ConfigService) {
   }
@@ -20,7 +20,7 @@ export class ItemListComponent implements OnInit {
   }
 
   getFooItems() {
-    this.restApi.getFoodItems().subscribe((data: FoodItem) => {
+    this.restApi.getFoodItems().subscribe((data: foodItem) => {
       console.log(data);
       this.Item = data;
     });
@@ -29,12 +29,5 @@ export class ItemListComponent implements OnInit {
   getImage(type: string = 'foodItem', image: string): string {
     return 'https://soft-box.s3.us-east-2.amazonaws.com/' + type + '/' + image;
   }
-
-  //
-  // getCountry(type: string = 'foodItem', city: string): string {
-  //   this.restApi.getCountry().subscribe((data: cityDetails[]) => {
-  //     this.city = data;
-  //   });
-  // }
 
 }

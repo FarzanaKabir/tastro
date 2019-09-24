@@ -17,7 +17,6 @@ import {FooterModule} from './footer/footer.module';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {SearchPageModule} from './search-page/search-page.module';
 import {RestaurantDetailsModule} from './restaurant-details/restaurant-details.module';
-import {JwtModule} from '@auth0/angular-jwt';
 import {OwlModule} from 'ngx-owl-carousel';
 
 
@@ -44,17 +43,7 @@ import {OwlModule} from 'ngx-owl-carousel';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule,
-
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: () => {
-          return localStorage.getItem('access_token');
-        },
-        whitelistedDomains: ['localhost'],
-        blacklistedRoutes: ['localhost/auth/login']
-      }
-    })
+    MatListModule
   ],
   providers: [],
   exports: [],
