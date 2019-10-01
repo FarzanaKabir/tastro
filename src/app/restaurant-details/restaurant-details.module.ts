@@ -9,9 +9,10 @@ import {LeftSidebarComponent} from './left-sidebar/left-sidebar.component';
 import {RightSidebarComponent} from './right-sidebar/right-sidebar.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
-  declarations: [RestaurantDetailsComponent, DetailsComponent, RestaurantBannerComponent, LeftSidebarComponent, RightSidebarComponent],
+  declarations: [RestaurantDetailsComponent, DetailsComponent, RestaurantBannerComponent, LeftSidebarComponent, RightSidebarComponent, CartComponent],
   imports: [
     CommonModule,
     AppRoutingModule,

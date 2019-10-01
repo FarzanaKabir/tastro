@@ -919,6 +919,31 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.22"
 
+"@ngrx/core@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/core/-/core-1.2.0.tgz#882b46abafa2e0e6d887cb71a1b2c2fa3e6d0dc6"
+  integrity sha1-iCtGq6+i4ObYh8txobLC+j5tDcY=
+
+"@ngrx/effects@^8.3.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-8.3.0.tgz#d99a777ab352d4efdf456a7dec307514187ba496"
+  integrity sha512-/DdBqCFpHOJZUAmIpefQ8EVwmJXXkcEdLhsV8aXncCNWkK61sy/MbZZfDAbee6Cd1is33bVXRUKD49Z+Upvw5A==
+
+"@ngrx/router-store@^8.3.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/router-store/-/router-store-8.3.0.tgz#18462b7901843b3ab212459ffbd6cfe2b71e87e4"
+  integrity sha512-wIWGW3ZyT9+lJEBXVsPx1/NLFQ8KoCbhlEmpmQHniXE3iIMnK25Or2JCNXfgrndQA9SSVlKIPP3uaDJMyoBotQ==
+
+"@ngrx/store-devtools@^8.3.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-8.3.0.tgz#c9e9f5bd9fe7e32c605d3a85888d4da91a582b02"
+  integrity sha512-7jsmN8wz6PMKrbqHnUulMvf8OSYUZbXXOwkcXRaGqIjlnEG9RCHQL0cXuF8zB6uX5xencdEXsRVQe3MdZXWQng==
+
+"@ngrx/store@^8.3.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-8.3.0.tgz#f2eaf428ec9e8379801cc37e3f6bffe88c2af472"
+  integrity sha512-QtM5T6/wTYqAlqeW60ptqqrsBwYF7jvQHsh0yE3AnwZIQvSbLFM2t5S2kN+753v4rHiXVRrA5pLaLzjGhAKcSg==
+
 "@ngtools/webpack@8.3.2":
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.3.2.tgz#e2b60056a57485b44b72fab52aa00327e5f713e8"
