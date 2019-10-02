@@ -1,5 +1,0 @@
-export enum PriceFilterTypes {
-  ORDER_BY_ASC = 'ORDER_BY_ASC',
-  ORDER_BY_DESC = 'ORDER_BY_DESC',
-  CLEAR_ORDER_BY_PRICE = 'CLEAR_ORDER_BY_PRICE'
-}

@@ -16,35 +16,11 @@
         </div>
         <div class="col-md-4">
           <div class="shopping-cart mr-auto">
-            <button mat-fab color="white" style="opacity: 0.5;"  type="button" id="navToggle">
+            <button mat-fab color="white" style="opacity: 0.5;" type="button" id="navToggle">
               <mat-icon>shopping_cart</mat-icon>
             </button>
             <div class="navbar-collapse offcanvas-collapse">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Notifications</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Profile</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Switch account</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">Settings</a>
-                  <div class="dropdown-menu" aria-labelledby="dropdown01">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-              </ul>
-
-
+              <app-cart></app-cart>
             </div>
           </div>
         </div>

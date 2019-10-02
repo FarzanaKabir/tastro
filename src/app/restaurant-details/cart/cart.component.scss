@@ -1,0 +1,12 @@
+.table {
+  width: 100%;
+  margin: 50px 0;
+}
+
+mat-cell {
+  font-size: 12px;
+  justify-content: space-between;
+}
+mat-cell:first-of-type{
+  padding-left: 15px !important;
+}

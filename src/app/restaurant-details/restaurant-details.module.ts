@@ -10,6 +10,7 @@ import {RightSidebarComponent} from './right-sidebar/right-sidebar.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { CartComponent } from './cart/cart.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [RestaurantDetailsComponent, DetailsComponent, RestaurantBannerComponent, LeftSidebarComponent, RightSidebarComponent, CartComponent],
@@ -19,6 +20,7 @@ import { CartComponent } from './cart/cart.component';
     SearchPageModule,
     MatButtonModule,
     MatIconModule,
+    MatTableModule,
   ],
   exports: []
 })
