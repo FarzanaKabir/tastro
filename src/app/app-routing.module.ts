@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from './home/home.component';
 import {RestaurantDetailsComponent} from './restaurant-details/restaurant-details.component';
 import {SearchResultComponent} from './search-page/search-result/search-result.component';
+import {SearchNotResultComponent} from './search-page/search-not-result/search-not-result.component';
 
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/restaurant',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
+  // {
+  //   path: 'home',
+  //   component: HomeComponent
+  // },
   {
     path: 'restaurant',
     component: RestaurantDetailsComponent
@@ -23,6 +23,10 @@ const routes: Routes = [
    {
     path: 'search-result',
     component: SearchResultComponent
+  },
+  {
+    path: '**',
+    component: SearchNotResultComponent
   }
 ];
 

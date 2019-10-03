@@ -1,10 +1,10 @@
 <section class="details-section mt-5 pt-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-2 col-sm-4">
         <app-left-sidebar></app-left-sidebar>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-7 col-sm-8">
         <div class="row mb-5">
           <div class="col-md-12">
             <div class="category-title">
@@ -14,7 +14,7 @@
         </div>
         <div class="item-details-card promotion" *ngFor="let item of promotions">
           <div class="row">
-            <div class="col-md-12 text-align-end">
+            <div class="col-md-12 col-sm-12 text-align-end">
               <button mat-stroked-button color="warn">
                 <mat-icon>add</mat-icon>
                 Add
@@ -22,12 +22,12 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-12">
               <div class="item-image">
                  <img class="img-fluid" src="{{item.image}}" alt="">
               </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-12">
               <div class="item-details">
                 <div class="item-name">
                   <h4><a href="">{{item.title}}</a></h4>
@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="row mt-5 mb-5">
-          <div class="col-md-12">
+          <div class="col-md-12 col-sm-12">
             <div class="category-title">
               <h3>Sub Meals</h3>
             </div>
@@ -60,12 +60,12 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-12">
               <div class="item-image">
                 <img class="img-fluid" src="{{item.image}}" alt="">
               </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-sm-12">
               <div class="item-details">
                 <div class="item-name">
                   <h4><a href="">{{item.title}}</a></h4>
@@ -82,7 +82,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 col-sm-12">
         <app-right-sidebar></app-right-sidebar>
       </div>
     </div>
