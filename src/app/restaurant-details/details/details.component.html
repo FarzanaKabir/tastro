@@ -12,7 +12,7 @@
             </div>
           </div>
         </div>
-        <div class="item-details-card promotion" *ngFor="let item of promotions">
+        <div class="item-details-card promotion" *ngFor="let item of items$ | async">
           <div class="row">
             <div class="col-md-12 col-sm-12 text-align-end">
               <button mat-stroked-button color="warn">
@@ -30,7 +30,7 @@
             <div class="col-md-8 col-sm-12">
               <div class="item-details">
                 <div class="item-name">
-                  <h4><a href="">{{item.title}}</a></h4>
+                  <h4><a href="">{{item.name}}</a></h4>
                 </div>
                 <div class="item-details">
                   <p>{{item.text}}</p>
@@ -50,37 +50,37 @@
             </div>
           </div>
         </div>
-        <div class="sub-meal item-details-card" *ngFor="let item of subi_meals">
-          <div class="row">
-            <div class="col-md-12 text-align-end">
-              <button mat-stroked-button color="warn">
-                <mat-icon>add</mat-icon>
-                Add
-              </button>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 col-sm-12">
-              <div class="item-image">
-                <img class="img-fluid" src="{{item.image}}" alt="">
-              </div>
-            </div>
-            <div class="col-md-8 col-sm-12">
-              <div class="item-details">
-                <div class="item-name">
-                  <h4><a href="">{{item.title}}</a></h4>
-                </div>
-                <div class="item-details">
-                  <p>{{item.text}}</p>
-                </div>
-                <div class="emoji d-inline-flex">
-                  <img width="30%" src="{{item.emoji}}" alt="">
-                  <h5 class="ml-3">4.2</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<!--        <div class="sub-meal item-details-card" *ngFor="let item of Item">-->
+<!--          <div class="row">-->
+<!--            <div class="col-md-12 text-align-end">-->
+<!--              <button mat-stroked-button color="warn">-->
+<!--                <mat-icon>add</mat-icon>-->
+<!--                Add-->
+<!--              </button>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="row">-->
+<!--            <div class="col-md-4 col-sm-12">-->
+<!--              <div class="item-image">-->
+<!--                <img class="img-fluid" src="{{item.image}}" alt="">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="col-md-8 col-sm-12">-->
+<!--              <div class="item-details">-->
+<!--                <div class="item-name">-->
+<!--                  <h4><a href="">{{item.name}}</a></h4>-->
+<!--                </div>-->
+<!--                <div class="item-details">-->
+<!--                  <p>{{item.text}}</p>-->
+<!--                </div>-->
+<!--                <div class="emoji d-inline-flex">-->
+<!--                  <img width="30%" src="{{item.emoji}}" alt="">-->
+<!--                  <h5 class="ml-3">4.2</h5>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
       <div class="col-md-3 col-sm-12">
         <app-right-sidebar></app-right-sidebar>

@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : {
+    apiKey: 'AIzaSyCKYfTKWYeOsp4YnJtqc93tqyBDMVUgHTw',
+    authDomain: 'waiter-app-24b7d.firebaseapp.com',
+    databaseURL: 'https://waiter-app-24b7d.firebaseio.com',
+    projectId: 'waiter-app-24b7d',
+    storageBucket: 'waiter-app-24b7d.appspot.com',
+    messagingSenderId: '430214044200',
+    appId: '1:430214044200:web:0c51739cb6d166b2b7f31d',
+    measurementId: 'G-XCS7EXRGZQ'
+  }
 };
 
 /*

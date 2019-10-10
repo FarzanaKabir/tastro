@@ -18,6 +18,10 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {SearchPageModule} from './search-page/search-page.module';
 import {RestaurantDetailsModule} from './restaurant-details/restaurant-details.module';
 import {OwlModule} from 'ngx-owl-carousel';
+import {environment} from '../environments/environment';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 
 @NgModule({
@@ -43,7 +47,12 @@ import {OwlModule} from 'ngx-owl-carousel';
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+
+
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   providers: [],
   exports: [],
