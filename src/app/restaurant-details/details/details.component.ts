@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {foodItem} from '../../typing';
-import {ProductService} from '../../service/product.service';
 import {Observable} from 'rxjs';
+import {ProductService} from '../../service/Product/product.service';
 
 @Component({
   selector: 'app-details',
