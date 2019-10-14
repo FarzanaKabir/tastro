@@ -1,44 +1,30 @@
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
-  <!-- Position Column -->
-  <ng-container matColumnDef="quantity">
-    <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
-    <mat-cell style="padding-right: 20px;" *matCellDef="let element">
-      <button mat-icon-button>
-        <mat-icon>remove</mat-icon>
-      </button>
-      1
-      <button mat-icon-button>
-        <mat-icon>add</mat-icon>
-      </button>
-    </mat-cell>
-  </ng-container>
-
-  <!-- Name Column -->
-  <ng-container matColumnDef="image">
-    <mat-header-cell *matHeaderCellDef> Image</mat-header-cell>
-    <mat-cell *matCellDef="let element"><img class="img-fluid" src="{{element.image}}" alt=""></mat-cell>
-  </ng-container>
-
-  <!-- Weight Column -->
-  <ng-container matColumnDef="name">
-    <mat-header-cell *matHeaderCellDef> Name</mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-  </ng-container>
-
-  <!-- Symbol Column -->
-  <ng-container matColumnDef="price">
-    <mat-header-cell *matHeaderCellDef> Price</mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.price}} </mat-cell>
-  </ng-container>
-
-  <ng-container matColumnDef="action">
-    <mat-header-cell *matHeaderCellDef>Action</mat-header-cell>
-    <mat-cell *matCellDef="let element">
-      <button mat-icon-button>
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-cell>
-  </ng-container>
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
+<div class="table-responsive">
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let product of cart">
+          <th scope="row" class="border-0">
+            <div class="p-2">
+              <img [src]="'/assets/product_images/' + product.Thumbnail" alt="" width="70" class="img-fluid rounded shadow-sm">
+              <div class="ml-3 d-inline-block align-middle">
+                <h5 class="mb-0">
+                    <a href="#" class="text-dark d-inline-block align-middle">{{product.name}}</a>
+                </h5>
+                <span class="text-muted font-weight-normal font-italic d-block ml-2">
+                        <span class="badge purple mr-1">{{product.category}}</span>
+                        <span class="badge blue mr-1">{{product.name}}</span>
+                </span>
+              </div>
+            </div>
+          </th>
+          <td class="border-0 align-middle">
+                <var class="price">${{(product.unitPrice * product.unitAmount).toFixed(2)}}</var>
+                <small class="text-muted">(${{product.unitPrice.toFixed(2)}} each)</small>
+          </td>
+          <td class="border-0 align-middle"><strong>{{product.unitAmount}}</strong></td>
+          <td class="border-0 align-middle"><a (click)="onRemoveProductsFromCart(product.id)" class="text-dark"><i class="fa fa-trash"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <li class="divider"></li>
+  <li><a class="text-center btn" [routerLink]="[ '/cart/shopping-cart' ]"><strong>View Cart</strong></a></li>

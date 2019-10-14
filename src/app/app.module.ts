@@ -1,7 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {MaterialModule} from './material/material.module';
@@ -22,11 +21,20 @@ import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { PaginationComponent } from './shared/pagination/pagination.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {ToastrModule} from 'ngx-toastr';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    PaginationComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +56,7 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    ToastrModule.forRoot(),
 
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -55,7 +64,8 @@ import {AngularFirestoreModule} from '@angular/fire/firestore';
     AngularFirestoreModule
   ],
   providers: [],
-  exports: [],
+  exports: [
+  ],
   bootstrap: [
     AppComponent
   ]

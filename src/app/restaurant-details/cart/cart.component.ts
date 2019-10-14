@@ -1,21 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-
-export interface Cart {
-  image: string;
-  name: string;
-  price: string;
-
-}
-
-const ELEMENT_DATA: Cart[] = [
-  {image: './assets/restaurant/photo6.png', name: 'subi meal', price: '$10.00'},
-  {image: './assets/restaurant/photo5.png', name: 'subi meal', price: '$10.00'},
-  {image: './assets/restaurant/photo4.png', name: 'subi meal', price: '$10.00'},
-  {image: './assets/restaurant/photo3.png', name: 'subi meal', price: '$10.00'},
-  {image: './assets/restaurant/photo2.png', name: 'subi meal', price: '$10.00'},
-  {image: './assets/restaurant/photo1.png', name: 'subi meal', price: '$10.00'},
-  {image: './assets/restaurant/photo6.png', name: 'subi meal', price: '$10.00'}
-];
+import {DataService} from '../../service/Shared/data.service';
+import {Ingredients} from '../../models/ingredients';
 
 @Component({
   selector: 'app-cart',
@@ -23,13 +8,24 @@ const ELEMENT_DATA: Cart[] = [
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  displayedColumns: string[] = ['quantity', 'image', 'name', 'price', 'action'];
-  dataSource = ELEMENT_DATA;
+  cart: Ingredients[] = [];
 
-  constructor() {
+  constructor(private dataService: DataService) {
   }
 
   ngOnInit() {
+    this.dataService.cart.subscribe(a => this.cart = a);
+  }
+
+  getCartProductItems() {
+    this.cart = JSON.parse(localStorage.getItem('Cart'));
+  }
+
+  onRemoveProductsFromCart(productId: number) {
+    this.cart = this.cart.filter(a => a.ProductId !== productId);
+    localStorage.setItem('Cart', JSON.stringify(this.cart));
+    this.dataService.updateCartItemCount(this.cart.length);
+    this.dataService.updateShoppingCart(this.cart);
   }
 
 }
