@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {RestaurantDetailsComponent} from './restaurant-details/restaurant-details.component';
-import {SearchResultComponent} from './search-page/search-result/search-result.component';
-import {SearchNotResultComponent} from './search-page/search-not-result/search-not-result.component';
+import {RestaurantComponent} from './components/restaurant/restaurant.component';
+import {SearchResultComponent} from './components/search-page/search-result/search-result.component';
+import {SearchNotResultComponent} from './components/search-page/search-not-result/search-not-result.component';
 
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/restaurant',
-    pathMatch: 'full'
+    redirectTo: '/',
+    pathMatch: 'full',
+    component: RestaurantComponent
   },
   // {
   //   path: 'home',
@@ -18,7 +19,7 @@ const routes: Routes = [
   // },
   {
     path: 'restaurant',
-    component: RestaurantDetailsComponent
+    component: RestaurantComponent
   },
    {
     path: 'search-result',

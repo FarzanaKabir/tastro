@@ -1,0 +1,157 @@
+.restaurant-banner {
+  background: url("../../../../assets/restaurant/banner.png") center center;
+  background-size: cover;
+  height: 716px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  content: '';
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  height: 25%;
+  width: 100%;
+}
+
+.overlay-title {
+  padding: 25px 0 10px 0;
+}
+
+.schedule-cart {
+  padding: 100px 0 0 0;
+  color: #fff;
+}
+
+.button-row {
+  opacity: .5;
+}
+
+.button-row a {
+  margin-right: 8px;
+}
+
+.schedule {
+  text-align: left;
+}
+
+.open-close-time {
+  text-align: center;
+}
+
+.open-close-time a {
+  color: #FFFFFF;
+}
+
+.open-close-time a mat-icon {
+  font-size: 18px;
+}
+
+.shopping-cart {
+  text-align: right;
+}
+
+.react-card {
+  height: 100%;
+  padding: 50px 0;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  transform: translate(0%, -20%);
+  visibility: visible;
+}
+
+.react-card h5 {
+  margin: 0;
+}
+
+.icon img {
+  width: 10%;
+}
+
+.icon {
+  margin: 15px 0;
+}
+
+.love-react {
+  margin: 18px 0 0 0;
+}
+
+
+//off canvas
+
+.offcanvas-collapse {
+  position: fixed;
+  top: 56px; /* Height of navbar */
+  bottom: 0;
+  right: 0%;
+  width: 385px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  overflow-y: auto;
+  visibility: hidden;
+  background-color: #ffffff;
+  transition-duration: .3s;
+  transition-property: left, visibility;
+}
+
+.offcanvas-collapse {
+  align-items: start;
+  /*   Adds a subtle drop shadow   */
+  -moz-background-clip: padding; /* Firefox 3.6 */
+  -webkit-background-clip: padding; /* Safari 4? Chrome 6? */
+  background-clip: padding-box; /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+
+
+/* Makes the nav visibile with the open class */
+.offcanvas-collapse.open {
+  right: 0;
+  visibility: visible;
+  z-index: 1;
+}
+
+
+.navbar-expand-lg .navbar-nav {
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+
+.nav-scroller {
+  position: relative;
+  z-index: 9;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
