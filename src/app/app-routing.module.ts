@@ -9,9 +9,8 @@ import {SearchNotResultComponent} from './components/search-page/search-not-resu
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/restaurant',
     pathMatch: 'full',
-    component: RestaurantComponent
   },
   // {
   //   path: 'home',

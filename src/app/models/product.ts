@@ -6,7 +6,7 @@ export interface Product {
   category: Category;
   id: number;
   image: string;
-  ingredients: Ingredients;
+  ingredients: Ingredients[];
   name: string;
   unitAmount: number;
 }

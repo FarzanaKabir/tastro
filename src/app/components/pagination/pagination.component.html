@@ -1,0 +1,25 @@
+<!-- pagination start -->
+<mat-card class="mb-4 mt-4" *ngIf="totalItems | async">
+  <div class="app-pagination" style="text-align: center;">
+    <button mat-flat-button [disabled]="(currentPage | async) === 1">
+      <!--            (click)="setPreviousPage()"-->
+
+      Previous
+    </button>
+
+    <ng-template ngFor let-page [ngForOf]="(pages | async)">
+      <button mat-flat-button
+              [color]="(currentPage | async) === page ? 'warn' : 'primary'"
+              (click)="setPageNumber(page)">
+        {{page}}
+      </button>
+    </ng-template>
+
+    <button mat-flat-button [disabled]="(totalPageNumber | async) === (currentPage | async)">
+      <!--            (click)="setNextPage()"-->
+
+      Next
+    </button>
+  </div>
+</mat-card>
+<!-- pagination end -->

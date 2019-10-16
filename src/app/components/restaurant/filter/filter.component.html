@@ -4,10 +4,10 @@
       <div class="list-group">
         <a class="list-group-item list-group-item-action flex-column align-items-start"
            *ngFor="let item of filteredCategoryList"
-           [ngClass]="{'active': selectedCategory == item.CategoryId}"
+           [ngClass]="{'active': selectedCategory == item.id}"
            (click)=onSelectCategory(item)>
           <div class="d-flex w-100 justify-content-between">
-            <h6 class="mb-1">{{item.Name}}</h6>
+            <h6 class="mb-1">{{item.name}}</h6>
             <!-- <small>3 days ago</small> -->
           </div>
         </a>

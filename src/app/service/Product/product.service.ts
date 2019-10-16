@@ -1,9 +1,12 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Paging} from '../../models/paging';
 import {Product} from '../../models/product';
 import {Observable} from 'rxjs';
 import {ProductPagingData} from '../../models/product-paging-data';
+import {Ingredients} from '../../models/ingredients';
+import {catchError} from 'rxjs/operators';
+import {HelpersService} from '../../helpers.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +20,7 @@ export class ProductService {
     })
   };
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private helpers: HelpersService) {
   }
 
   geProductByDepartmentId(paging: Paging): Observable<Product[]> {
@@ -30,5 +33,17 @@ export class ProductService {
 
   getProductDetailsById(productId: number): Observable<Product> {
     return this.http.get<Product>(`${this.url}product/getProductDetails?productId=${productId}`, this.httpOptions);
+  }
+    getProducts(offset = 0, limit = 30, search = '') {
+    const params = new HttpParams()
+      .set('offset', offset.toString())
+      .set('limit', limit.toString())
+      .set('search', search);
+
+    return this.http
+      .get<Ingredients>(this.url + 'ingredients/', {params})
+      .pipe(
+        catchError(err => this.helpers.showErrors(err))
+      );
   }
 }

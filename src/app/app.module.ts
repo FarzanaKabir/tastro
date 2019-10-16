@@ -21,12 +21,17 @@ import {RegisterComponent} from './components/Auth/register/register.component';
 import {PaginationComponent} from './shared/pagination/pagination.component';
 import {ToastrModule} from 'ngx-toastr';
 import {RestaurantModule} from './components/restaurant/restaurant.module';
-import {LayoutComponent} from './components/layout/layout.component';
 import {LayoutModule} from './components/layout/layout.module';
 import {ShoppingCartComponent} from './components/shopping-cart/shopping-cart.component';
 import {HomeModule} from './components/home/home.module';
 import {SearchPageModule} from './components/search-page/search-page.module';
-import { AccountComponent } from './components/Auth/account/account.component';
+import {AccountComponent} from './components/Auth/account/account.component';
+import {CheckoutComponent} from './components/checkout/checkout.component';
+import {CheckoutNavbarComponent} from './components/checkout/checkout-navbar/checkout-navbar.component';
+import {PaginationModule} from './components/pagination/pagination.module';
+import {OrderConfirmationComponent} from './components/order-confirmation/order-confirmation.component';
+import {CategoryModule} from './components/category/category.module';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -36,8 +41,10 @@ import { AccountComponent } from './components/Auth/account/account.component';
     RegisterComponent,
     PaginationComponent,
     ShoppingCartComponent,
-    LayoutComponent,
     AccountComponent,
+    CheckoutComponent,
+    CheckoutNavbarComponent,
+    OrderConfirmationComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,6 +59,8 @@ import { AccountComponent } from './components/Auth/account/account.component';
     LayoutModule,
     HomeModule,
     SearchPageModule,
+    PaginationModule,
+    CategoryModule,
 
     MatButtonModule,
     MatToolbarModule,
@@ -63,7 +72,8 @@ import { AccountComponent } from './components/Auth/account/account.component';
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [],
   exports: [],

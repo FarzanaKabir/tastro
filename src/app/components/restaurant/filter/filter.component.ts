@@ -37,8 +37,8 @@ export class FilterComponent implements OnInit {
   onSelectCategory(category) {
     this.selectedCategory = category.CategoryId;
     let filter: Paging = new Paging();
-    filter.CategoryId = this.selectedCategory;
-    filter.CategoryName = (this.selectedCategory === 0) ? '' : this.categoryList.filter(a => a.id === this.selectedCategory)[0].name;
+    filter.id = this.selectedCategory;
+    filter.name = (this.selectedCategory === 0) ? '' : this.categoryList.filter(a => a.id === this.selectedCategory)[0].name;
     this.productList.setFilters(filter);
   }
 
