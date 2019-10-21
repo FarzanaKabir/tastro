@@ -1,8 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ProductListComponent} from '../product-list/product-list.component';
 import {Category} from '../../../models/category';
-import {CategoryService} from '../../../service/Category/category.service';
 import {Paging} from '../../../models/paging';
+import {CategoryService} from '../../category/category.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-filter',
@@ -17,7 +18,8 @@ export class FilterComponent implements OnInit {
 
   @Input() productList: ProductListComponent;
 
-  constructor(private categoryService: CategoryService
+  constructor(private categoryService: CategoryService, private route: ActivatedRoute,
+              private router: Router,
   ) {
   }
 
@@ -33,13 +35,16 @@ export class FilterComponent implements OnInit {
     });
   }
 
-
-  onSelectCategory(category) {
-    this.selectedCategory = category.CategoryId;
-    let filter: Paging = new Paging();
-    filter.id = this.selectedCategory;
-    filter.name = (this.selectedCategory === 0) ? '' : this.categoryList.filter(a => a.id === this.selectedCategory)[0].name;
-    this.productList.setFilters(filter);
+  setCategory(category: Category) {
+    this
+      .router
+      .navigate([], {
+        relativeTo: this.route,
+        queryParams: {
+          category: category.id
+        },
+        queryParamsHandling: 'merge'
+      });
   }
 
 

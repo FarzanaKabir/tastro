@@ -1,12 +1,16 @@
-.table {
-  width: 100%;
-  margin: 50px 0;
+.table-responsive{
+    max-height: 500px;
 }
-
-mat-cell {
-  font-size: 12px;
-  justify-content: space-between;
+.text-center.btn{
+    background: #16a085;
+    width: 100%;
+    color: #fff;
+    margin: 0;
 }
-mat-cell:first-of-type{
-  padding-left: 15px !important;
+.price {
+    color: #16a085;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 5px;
+    display: block;
 }

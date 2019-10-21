@@ -1,6 +1,7 @@
-import {FoodItem} from './food-item';
+import {Ingredients} from './ingredients';
+
 
 export interface ProductPagingData {
-  Products: FoodItem[];
+  Products:Ingredients[];
     ProductCount: number;
 }

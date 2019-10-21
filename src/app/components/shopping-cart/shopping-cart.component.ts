@@ -25,7 +25,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   onRemoveProductsFromCart(productId: number) {
-    this.cart = this.cart.filter(a => a.ProductId !== productId);
+    this.cart = this.cart.filter(a => a.id !== productId);
     localStorage.setItem('Cart', JSON.stringify(this.cart));
     this.dataService.updateCartItemCount(this.cart.length);
     this.dataService.updateShoppingCart(this.cart);
@@ -35,13 +35,13 @@ export class ShoppingCartComponent implements OnInit {
   onUpdateQuantity(type, productId) {
     if (type === 1) {
       this.cart.forEach((element, index) => {
-        if (element.ProductId === productId) {
+        if (element.id === productId) {
           this.cart[index].unitAmount = element.unitAmount + 1;
         }
       });
     } else {
       this.cart.forEach((element, index) => {
-        if (element.ProductId === productId) {
+        if (element.id === productId) {
           this.cart[index].unitAmount = element.unitAmount - 1;
         }
       });

@@ -6,6 +6,5 @@ export interface User {
   email: string;
   login: string;
   password: string;
-  id_token: string;
   authorities: string;
 }

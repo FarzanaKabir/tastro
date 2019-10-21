@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {RestaurantComponent} from './components/restaurant/restaurant.component';
 import {SearchResultComponent} from './components/search-page/search-result/search-result.component';
 import {SearchNotResultComponent} from './components/search-page/search-not-result/search-not-result.component';
-
+import {CartComponent} from './components/restaurant/cart/cart.component';
+import {ShoppingCartComponent} from './components/shopping-cart/shopping-cart.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/restaurant',
+    redirectTo: 'restaurant',
     pathMatch: 'full',
   },
   // {
@@ -20,13 +21,23 @@ const routes: Routes = [
     path: 'restaurant',
     component: RestaurantComponent
   },
-   {
+  {
     path: 'search-result',
     component: SearchResultComponent
   },
   {
-    path: '**',
-    component: SearchNotResultComponent
+    path: 'cart',
+    component: CartComponent,
+    children: [
+      {
+        path: 'shopping-cart',
+        component: ShoppingCartComponent
+      },
+    ]
+  },
+
+  {
+    path: '*', redirectTo: 'restaurant', pathMatch: 'full'
   }
 ];
 
@@ -35,4 +46,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

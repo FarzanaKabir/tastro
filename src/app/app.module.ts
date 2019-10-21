@@ -10,7 +10,6 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {OwlModule} from 'ngx-owl-carousel';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
@@ -21,7 +20,6 @@ import {RegisterComponent} from './components/Auth/register/register.component';
 import {PaginationComponent} from './shared/pagination/pagination.component';
 import {ToastrModule} from 'ngx-toastr';
 import {RestaurantModule} from './components/restaurant/restaurant.module';
-import {LayoutModule} from './components/layout/layout.module';
 import {ShoppingCartComponent} from './components/shopping-cart/shopping-cart.component';
 import {HomeModule} from './components/home/home.module';
 import {SearchPageModule} from './components/search-page/search-page.module';
@@ -31,7 +29,11 @@ import {CheckoutNavbarComponent} from './components/checkout/checkout-navbar/che
 import {PaginationModule} from './components/pagination/pagination.module';
 import {OrderConfirmationComponent} from './components/order-confirmation/order-confirmation.component';
 import {CategoryModule} from './components/category/category.module';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CustomerInfoComponent} from './components/checkout/customer-info/customer-info.component';
+import {ReviewComponent} from './components/checkout/review/review.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {LayoutModule} from './components/layout/layout.module';
 
 
 @NgModule({
@@ -45,6 +47,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     CheckoutComponent,
     CheckoutNavbarComponent,
     OrderConfirmationComponent,
+    CustomerInfoComponent,
+    ReviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,31 +56,32 @@ import {ReactiveFormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     FlexLayoutModule,
     HttpClientModule,
-    FontAwesomeModule,
     OwlModule,
 
     RestaurantModule,
-    LayoutModule,
     HomeModule,
     SearchPageModule,
     PaginationModule,
     CategoryModule,
+    LayoutModule,
 
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatSnackBarModule,
     ToastrModule.forRoot(),
 
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
-  exports: [],
+  exports: [MatSnackBarModule],
   bootstrap: [
     AppComponent
   ]

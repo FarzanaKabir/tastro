@@ -1,5 +1,5 @@
 import {FoodProcessingUnit} from './food-processing-unit';
-import {Restaurant} from './restaurant';
+import {Ingredients} from './ingredients';
 
 export interface Category {
   categoryPurpose: string;
@@ -7,6 +7,5 @@ export interface Category {
   id: number;
   image: string;
   name: string;
-  restaurant: Restaurant;
-
+  ingredients: Ingredients[];
 }

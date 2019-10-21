@@ -14,7 +14,7 @@ export class DataService {
   cart = this.shoppingCart.asObservable();
 
   constructor() {
-    let isEmptyCart: boolean = localStorage.getItem('Cart') == null;
+    const isEmptyCart: boolean = localStorage.getItem('Cart') == null;
     this.updateCartItemCount(isEmptyCart ? 0 : JSON.parse(localStorage.getItem('Cart')).length);
     this.updateShoppingCart(isEmptyCart ? [] : JSON.parse(localStorage.getItem('Cart')));
   }

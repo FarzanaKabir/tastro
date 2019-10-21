@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CartProduct } from 'src/app/models/cart-product';
+import {Component, OnInit} from '@angular/core';
+import {CartItem} from '../../../models/cart-item';
 
 @Component({
   selector: 'app-review',
@@ -8,14 +8,15 @@ import { CartProduct } from 'src/app/models/cart-product';
 })
 export class ReviewComponent implements OnInit {
 
-  checkoutProducts: CartProduct[];
+  checkoutProducts: CartItem[];
   totalPrice: number = 0;
+
   constructor() {
     const products = JSON.parse(localStorage.getItem('Cart'));
     this.checkoutProducts = products;
     products.forEach((product) => {
-			this.totalPrice += product.Price;
-		});
+      this.totalPrice += product.Price;
+    });
   }
 
   ngOnInit() {

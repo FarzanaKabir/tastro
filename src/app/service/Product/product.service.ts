@@ -16,7 +16,7 @@ export class ProductService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfTUFOQUdFUixST0xFX1VTRVIsUk9MRV9XQUlURVIiLCJleHAiOjE1NzExMjI1MDd9.p8yYURH0GEGnned9PzKLyu5zpZfipCTTaidC_diLvWFw6m_TznuUb5Vrj0iM57H-IFsKfNxVTT2Trkz-ZlOB2A'
+      Authorization: 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYWhhbkBiYW5nbGEuY29tIiwiYXV0aCI6IlJPTEVfV0FJVEVSIiwiZXhwIjoxNTczOTA2NzIyfQ.jvFzCVccoXVDry4kpiwh_06U6bjluRC68Ed4MXzUf4UanKAPMkeY3RtI78IGtqY7COP-jA8l4lA-LN69Ko_FVA'
     })
   };
 
@@ -34,16 +34,8 @@ export class ProductService {
   getProductDetailsById(productId: number): Observable<Product> {
     return this.http.get<Product>(`${this.url}product/getProductDetails?productId=${productId}`, this.httpOptions);
   }
-    getProducts(offset = 0, limit = 30, search = '') {
-    const params = new HttpParams()
-      .set('offset', offset.toString())
-      .set('limit', limit.toString())
-      .set('search', search);
 
-    return this.http
-      .get<Ingredients>(this.url + 'ingredients/', {params})
-      .pipe(
-        catchError(err => this.helpers.showErrors(err))
-      );
+  getProducts() {
+    return this.http.get<Ingredients>(`${this.url}food-items`, this.httpOptions);
   }
 }

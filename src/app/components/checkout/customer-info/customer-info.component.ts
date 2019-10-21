@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Customer } from 'src/app/models/customer';
+import {Component, OnInit} from '@angular/core';
+import {User} from '../../../models/user';
 
 @Component({
   selector: 'app-customer-info',
@@ -8,11 +8,13 @@ import { Customer } from 'src/app/models/customer';
 })
 export class CustomerInfoComponent implements OnInit {
 
-  customerInfor: Customer = new Customer();
-  constructor() { }
+  customerInfo: User;
+
+  constructor() {
+  }
 
   ngOnInit() {
-    this.customerInfor = JSON.parse(localStorage.getItem('user'));
+    this.customerInfo = JSON.parse(localStorage.getItem('user'));
   }
 
 }

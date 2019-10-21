@@ -8,7 +8,6 @@ import {FooterBottomComponent} from './footer/footer-bottom/footer-bottom.compon
 import {RouterModule} from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -22,7 +21,6 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     RouterModule,
     MatButtonModule,
     MatIconModule,
-    FontAwesomeModule
   ]
 })
 export class LayoutModule {

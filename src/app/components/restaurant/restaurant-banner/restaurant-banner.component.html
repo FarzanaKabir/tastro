@@ -16,12 +16,16 @@
         </div>
         <div class="col-md-4 col-sm-4">
           <div class="shopping-cart mr-auto">
-            <button mat-fab color="white" style="opacity: 0.5;" type="button" id="navToggle">
-              <mat-icon>shopping_cart</mat-icon>
-            </button>
-            <div class="navbar-collapse offcanvas-collapse">
-              <app-cart></app-cart>
-            </div>
+            <ul class="navbar-nav nav-flex-icons">
+              <li class="nav-item dropdown">
+                <button mat-fab color="white" style="opacity: 0.5;" type="button"
+                        class="nav-link waves-effect dropdown-toggle">
+                  <span class="badge red z-depth-1 mr-1"> {{itemCount}} </span>
+                  <mat-icon>shopping_cart</mat-icon>
+                </button>
+              </li>
+              <app-cart class="dropdown-menu dropdown-cart mr-5 pb-0" *ngIf="itemCount != 0"></app-cart>
+            </ul>
           </div>
         </div>
       </div>

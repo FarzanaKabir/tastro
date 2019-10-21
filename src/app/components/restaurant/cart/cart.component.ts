@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
   }
 
   onRemoveProductsFromCart(productId: number) {
-    this.cart = this.cart.filter(a => a.ProductId !== productId);
+    this.cart = this.cart.filter(a => a.id !== productId);
     localStorage.setItem('Cart', JSON.stringify(this.cart));
     this.dataService.updateCartItemCount(this.cart.length);
     this.dataService.updateShoppingCart(this.cart);
